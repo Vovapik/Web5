@@ -84,6 +84,14 @@ function deleteCookie(name) {
 }
 
 
+const clearStorageButton = document.getElementById('clearStorageButton');
+
+clearStorageButton.addEventListener('click', () => {
+    localStorage.clear();
+
+    alert('LocalStorage has been cleared!');
+});
+
 window.onload = () => {
     const centerBlock = document.querySelector('.center-block');
     const textColorInput = document.getElementById('textColor');
@@ -97,9 +105,9 @@ window.onload = () => {
     textColorInput.addEventListener('input', (event) => {
         const selectedColor = event.target.value;
         centerBlock.style.color = selectedColor;
-
         localStorage.setItem('textColor', selectedColor);
     });
+
     const savedData = getCookie("minNumbersInfo");
 
     if (savedData) {
@@ -198,7 +206,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
+
     window.addEventListener("beforeunload", () => {
-        localStorage.clear();
+        blocks.forEach(block => {
+            localStorage.removeItem(`block_${block.dataset.id}`);
+        });
     });
+
 });

@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p a {
+    color: #770ba3;
+    text-decoration: none;
+}
+
+p a:visited {
+    color: #770ba3;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: " Harrington", Harrington;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.photos img {
+    display: none;
+    max-width: 80%;
+    height: auto;
+}
+.photos img:nth-child(1):target,
+.photos img:nth-child(2):target,
+.photos img:nth-child(3):target,
+.photos img:nth-child(4):target,
+.photos img:nth-child(5):target {
+    display: flex;
+}
+
+.main-header-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.block{
+
+}
+
+.header {
+    height: auto;
+    background-color: transparent;
+    color: #770ba3;
+    padding: 20px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    border: 2px solid #333;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.header-box {
+    background-color: #020c33;
+    color: #770ba3;
+    padding: 5px 10px;
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    border: 2px solid #333;
+}
+
+.main-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+    height: 100%;
+}
+
+.left-block {
+    background-color: transparent;
+    font-size: x-large;
+    color: #770ba3;
+    width: auto;
+    padding: 20px;
+    flex-shrink: 0;
+    height: auto;
+    position: relative;
+    top: 0;
+    border: 2px solid #333;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.center-right-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.center-right-footer-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.center-content {
+    display: flex;
+    flex: 1;
+}
+
+.center-block {
+    background-color: transparent;
+    font-size: x-large;
+    color: #770ba3;
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #333;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.right-block {
+    background-color: transparent;
+    width: auto;
+    font-size: x-large;
+    color: #770ba3;
+    padding: 20px;
+    border: 2px solid #333;
+    flex: 1;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.right-block2 {
+    background-color: transparent;
+    width: auto;
+    font-size: x-large;
+    color: #770ba3;
+    padding: 20px;
+    border: 2px solid #333;
+    flex: 1;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.footer {
+    height: auto;
+    background-color: transparent;
+    color: #770ba3;
+    padding: 20px;
+    flex-shrink: 0;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    border: 2px solid #333;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+}
+
+.footer-box {
+    background-color: #020c33;
+    flex-direction: column;
+    color: #770ba3;
+    padding: 5px 10px;
+    width: fit-content;
+    left: 10px;
+    border: 2px solid #333;
+    position: absolute;
+    top: 0;
+}
+.footer, .footer-box {
+    box-sizing: border-box;
+}
+/* Mobile-Friendly Layout */
+@media screen and (max-width: 900px) {
+    /* General adjustments for mobile */
+    body, html {
+        display: block; /* Switch from flex to block for better stacking */
+    }
+
+    .main-header-container {
+        flex-direction: column; /* Ensure elements stack vertically */
+    }
+
+    .header {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .header-box {
+        position: static; /* Make the header-box inline instead of absolute */
+        transform: none; /* Remove transform */
+        margin-bottom: 10px;
+    }
+
+    .main-container {
+        flex-direction: column; /* Stack left, center, and right blocks vertically */
+    }
+
+    .left-block,
+    .center-block,
+    .right-block {
+        width: 100%; /* Make all blocks full-width */
+        padding: 10px; /* Reduce padding for better fit */
+    }
+
+    .left-block img {
+        width: 100%; /* Ensure images in the left block scale properly */
+        height: auto;
+    }
+
+    .photos img {
+        max-width: 100%; /* Adjust photo size for smaller screens */
+        height: auto;
+    }
+
+    .right-container {
+        flex-direction: column; /* Stack right-block sections vertically */
+    }
+
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footer-box {
+        position: static;
+        transform: none;
+        margin-bottom: 10px;
+    }
+
+    /* Typography adjustments */
+    h1, h2 {
+        font-size: 1.5em; /* Reduce heading size for smaller screens */
+    }
+
+    ul {
+        margin-left: 10px; /* Reduce indents for lists */
+    }
+
+    p, li {
+        font-size: 1em; /* Adjust text size for readability */
+    }
+}

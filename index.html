@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title>TAROT FLEX</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="main-header-container">
+  <div class="block header" data-id="1">
+    <div class="header-box">
+      <h1>Tarot</h1>
+    </div>
+    <h1>TRY AND PEEK INTO THE FUTURE</h1>
+  </div>
+  <div class="main-container">
+    <div class="block left-block" data-id="2">
+      <h1>PORTAL</h1><br>
+      <ul>
+        <li><a href="index.html">
+          Main
+        </a></li>
+        <li><a href="index.html">
+          Main
+        </a></li>
+        <li><a href="index.html">
+          Main
+        </a></li>
+        <li><a href="index.html">
+          Main
+        </a></li>
+        <li><a href="index.html">
+          Main
+        </a></li>
+        <li><a href="index.html">
+          Main
+        </a></li>
+      </ul>
+      <br>
+      <img src="map.jpg" height="200" width="300" usemap="#image-map">
+      <map name="image-map">
+        <area shape="rect" coords="0,0,300,90" href="index.html" alt="Main">
+        <area shape="rect" coords="0,90,130,200" href="index.html" alt="Main">
+        <area shape="rect" coords="130,90,300,200" href="index.html" alt="Main">
+      </map>
+    </div>
+    <div class="center-right-footer-container">
+      <div class="center-right-container">
+        <div class="center-content">
+          <div class="block center-block" data-id="3">
+            <h1>Card examples</h1>
+            <div class="photos">
+              <img id="photo1" src="card1.jpg" height="270" width="150" alt="Chariot">
+              <img id="photo2" src="card2.jpg" height="270" width="150" alt="Hermit">
+              <img id="photo3" src="card3.jpg" height="270" width="150" alt="Temperance">
+              <img id="photo4" src="card4.jpg" height="270" width="150" alt="Death">
+              <img id="photo5" src="card5.jpg" height="270" width="150" alt="Tower">
+            </div>
+            <p>
+              <a href="#" data-target="photo1">Chariot</a> |
+              <a href="#" data-target="photo2">Hermit</a> |
+              <a href="#" data-target="photo3">Temperance</a> |
+              <a href="#" data-target="photo4">Death</a> |
+              <a href="#" data-target="photo5">Tower</a>
+            </p>
+            <button id="swapButton">Press to swap</button>
+            <form>
+              <label for="sideA">Input sides:</label><br>
+              <input type="text" id="sideA" name="sideA" value=""><br>
+              <input type="text" id="sideB" name="sideB" value=""><br>
+              <input type="text" id="sideC" name="sideC" value=""><br>
+            </form>
+            <button type="button" id="calculateButton">Calculate area</button>
+            <div id="center">
+              <h2>Enter 10 numbers:</h2>
+              <form id="numberForm">
+                <div>
+                  <label for="numbers">Number:</label><br>
+                  <input type="text" id="numbers" name="numbers" placeholder="Example: 1, 2, 3" required>
+                </div>
+                <br>
+                <button type="button" id="calculateButton2">Calculate</button>
+              </form>
+            </div>
+            <div>
+              <label for="textColor">Choose text color:</label>
+              <input type="color" id="textColor" name="textColor" value="#770ba3">
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="block right-block" data-id="4"><h2>What is it?</h2>
+              Tarot is a form of divination that uses a deck of specially illustrated cards to gain insight into the past, present, or future. Tarot reading is often associated with spirituality, self-reflection, and guidance, though its uses and interpretations vary widely.</div>
+            <div class="block right-block2" data-id="5">
+              A traditional tarot deck consists of 78 cards, divided into two main sections:
+              <ul style="margin-left: 20px;">
+                <li>
+                  Major Arcana (22 cards):
+                  <br>
+                  Represents significant life events, spiritual lessons, and archetypes.
+                </li>
+                <li>
+                  Minor Arcana (56 cards):
+                  Focuses on everyday life and practical matters.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block footer" data-id="6">
+        <div class="footer-box">
+          <h1>Tarot</h1>
+        </div>
+        <h1>UNVEIL THE SECRETS OF FATE</h1>
+      </div>
+    </div>
+
+  </div>
+</div>
+<form id="itemForm" style="display: none; margin-top: 20px;">
+  <label for="listItem">Add list element:</label>
+  <input type="text" id="listItem" placeholder="Enter text">
+  <button type="button" id="addItem">Add</button>
+</form>
+<button id="saveList" style="display: none; margin-top: 10px;">Save list</button>
+
+<script src="scripts.js"></script>
+</body>
+</html>

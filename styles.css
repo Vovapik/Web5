@@ -182,15 +182,13 @@ body, html {
 .footer, .footer-box {
     box-sizing: border-box;
 }
-/* Mobile-Friendly Layout */
 @media screen and (max-width: 900px) {
-    /* General adjustments for mobile */
     body, html {
-        display: block; /* Switch from flex to block for better stacking */
+        display: block; 
     }
 
     .main-header-container {
-        flex-direction: column; /* Ensure elements stack vertically */
+        flex-direction: column;
     }
 
     .header {
@@ -199,34 +197,34 @@ body, html {
     }
 
     .header-box {
-        position: static; /* Make the header-box inline instead of absolute */
-        transform: none; /* Remove transform */
+        position: static;
+        transform: none;
         margin-bottom: 10px;
     }
 
     .main-container {
-        flex-direction: column; /* Stack left, center, and right blocks vertically */
+        flex-direction: column; 
     }
 
     .left-block,
     .center-block,
     .right-block {
-        width: 100%; /* Make all blocks full-width */
-        padding: 10px; /* Reduce padding for better fit */
+        width: 100%; 
+        padding: 10px; 
     }
 
     .left-block img {
-        width: 100%; /* Ensure images in the left block scale properly */
+        width: 100%; 
         height: auto;
     }
 
     .photos img {
-        max-width: 100%; /* Adjust photo size for smaller screens */
+        max-width: 100%; 
         height: auto;
     }
 
     .right-container {
-        flex-direction: column; /* Stack right-block sections vertically */
+        flex-direction: column;
     }
 
     .footer {
@@ -240,16 +238,15 @@ body, html {
         margin-bottom: 10px;
     }
 
-    /* Typography adjustments */
     h1, h2 {
-        font-size: 1.5em; /* Reduce heading size for smaller screens */
+        font-size: 1.5em; 
     }
 
     ul {
-        margin-left: 10px; /* Reduce indents for lists */
+        margin-left: 10px; 
     }
 
     p, li {
-        font-size: 1em; /* Adjust text size for readability */
+        font-size: 1em;
     }
 }
